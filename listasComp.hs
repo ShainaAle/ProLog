@@ -61,3 +61,12 @@ sorted xs = and [x <= y | (x, y) <- pairs xs]
 --Busca elementos tal que el tercero al cuadrado sea la suma de el cudrado de los otros 2, devuelve lista
 pyths :: Int -> [(Int,Int,Int)]
 pyths n = [(x,y,z) | x <-[1..n],y <-[1..n],z <-[1..n], z^2 == x^2 + y^2]
+
+perfect :: Int -> Bool
+perfect n 
+            |sum(factors n) - n == n = True
+            |otherwise = False
+
+perfects :: Int -> [Int]
+perfects n = [x | x <- [1..n], perfect x]
+
