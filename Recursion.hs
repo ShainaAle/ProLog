@@ -33,3 +33,16 @@ longitud :: [a] -> Int
 longitud [] = 0
 --el "_" es para decir que el header no nos interesa, solo queremos trabajar con el tail
 longitud (_:xs) = 1 + longitud xs
+
+listaPrueba :: [Int] -> Int
+listaPrueba (x:xs)=x
+
+listaPrueba2 :: [Int] -> [Int]
+listaPrueba2 (x:xs) = xs
+
+listaPrueba3 :: [a] -> a
+listaPrueba3 (x1:x2:x3:x4:xs) = x2
+
+listaPrueba4 :: [a] -> [a]
+listaPrueba4 (x1:x2:x3:x4:xs) = xs
+

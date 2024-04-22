@@ -70,3 +70,4 @@ perfect n
 perfects :: Int -> [Int]
 perfects n = [x | x <- [1..n], perfect x]
 
+
